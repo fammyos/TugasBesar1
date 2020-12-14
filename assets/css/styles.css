@@ -1,0 +1,515 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    background-color: #131314;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    color: #8a1fe5;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: #8a1fe5;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #697477;
+}
+
+nav h4 {
+    cursor: pointer;
+}
+
+nav h4:hover {
+    color: #697477;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px; 
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #8a1fe5;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: #8a1fe5;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: #8a1fe5;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+}
+
+
+/* Banner */
+.banner {
+    background-color: #131314;
+    text-align: center;
+}
+
+.banner h1, p {
+    padding-top: 10px;
+}
+
+.banner h1 {
+    font-size: 50px;
+}
+
+.banner p {
+    color: #697477;
+}
+
+#contact {
+    padding: 50px;
+}
+
+section {
+    padding: 50px;
+    color: #8a1fe5;
+}
+
+.banner img {
+    width: 300px;
+    padding: 15px;
+
+}
+
+section h2 {
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+
+section h2::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 4px;
+    background-color:#697477; 
+    left: calc(50% - 20px);
+}
+
+/* About */
+.about p {
+    text-align: justify;
+    line-height: 25px;
+    text-indent: 30px;
+    margin-bottom: 15px;
+    color:  #697477;
+}
+
+.about h2 {
+    color: #131314;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 4px;
+    background-color: #697477;
+    left: calc(50% - 20px);
+}
+
+.socials {
+    text-align: right;
+    font-size: 1.4rem;
+}
+
+.about-socials {
+    color: #697477;
+}
+
+.about-socials:hover {
+    color:#8a1fe5;
+}
+
+
+/* Skills */
+.skills h3 {
+    margin: 50px 0 20px 0;
+    color: #131314;
+}
+
+.skills h2 {
+    color: #131314;
+}
+
+.skills h4 {
+    color: #697477;
+    margin-left: 50px;
+}
+
+.skills .bar {
+    height: 30px;
+    margin: 10px 0 20px 0; 
+}
+
+.bar .nilai {
+    height: 20px;
+    background-color: #8a1fe5;
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 1rem;
+    padding-top: 5px;
+    margin-left: 40px;
+    font-weight: 500;
+}
+
+/* Development */
+.html {
+    width:70%;
+}
+
+.css {
+    width: 60%;
+}
+.js {
+    width: 10%;
+}
+
+/* Design */
+.design h3 {
+    margin: 80px 0 20px 0;
+}
+
+.design h4 {
+    margin-left: 50px;
+}
+
+.ps {
+    width: 60%;
+}
+
+.pp {
+    width: 60%;
+}
+
+/* Hobby */
+.hobby {
+    margin: 80px 0 20px 0;
+}
+
+.hobby ul {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.hobby .bola {
+    border-radius: 1rem;
+    background-color: #8a1fe5;
+    margin: 10px 0 20px 0;
+    width: 20%;
+    text-align: center;
+    padding-top: 10px;
+    height: 30px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.hobby .gunung {
+    border-radius: 1rem;
+    background-color:#8a1fe5;
+    margin: 10px 0 20px 0;
+    width: 20%;
+    text-align: center;
+    padding-top: 10px;
+    height: 30px;
+    color: #ffffff;
+    font-weight: 500;
+    align-items: center;
+}
+
+.hobby .dunia {
+    border-radius: 1rem;
+    background-color:#8a1fe5;
+    margin: 10px 0 20px 0;
+    width: 20%;
+    text-align: center;
+    padding-top: 10px;
+    height: 30px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Portofolio */
+.portofolio h2 {
+    color: #131314;
+}
+
+.col-4 {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 15px;
+    float: left;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.col-4 img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.col-4 a:hover img {
+    transform: scale(1.2);
+    transition: all 0.8s;
+}
+
+/* Contact */
+.contact {
+    margin: 20%;
+    width: 54%;
+    padding-left: 50px;
+    padding-right: -50px;
+}
+
+.contact h2 {
+    color: #131314;
+}
+
+.contact h3 {
+    color: #131314;
+}
+
+.contact p {
+    color: #697477;
+}
+
+.col-3 {
+    width: 33.33%;
+    box-sizing: border-box;
+    text-align: center;
+    float: left;
+    padding: 50px 10px;
+}
+
+.col-3 h3 {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #697477;
+}
+
+/* Footer */
+footer {
+   background: #131314;
+   height: auto;
+   width: 100vw;
+   padding-top: 40px;
+   color: #ffffff;
+   position: absolute;
+   left: 0;
+   right: 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    color: #8a1fe5;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #697477;
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.social li {
+    margin: 0 10px;
+}
+
+.social a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.social a i {
+    font-size: 1.1rem;
+    transition: color 0.4s ease;
+}
+
+.social a:hover i {
+    color: #8a1fe5;
+}
+
+.footer-bottom {
+    background: #000000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: #697477;
+}
+
+
+/* Responsive Navbar */
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+
+    .col-4 {
+        width: 50%;
+    }
+
+    .contact h2 {
+        width: 60%;
+    }
+    
+    .col-3 {
+        width: 75%;
+    }
+
+    .hobby ul {
+        width: 100%;
+    }
+
+    .development h4 {
+        width: 100%;
+    }
+
+    .design h4 {
+        width: 100%;
+    }
+
+    .col-3 h3 {
+        width: 100%
+    }
+
+    footer {
+        width: 100%;
+        bottom: -460%;
+    }
+
+    .footer-bottom {
+        width: 100%;
+    }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color:  #131314;
+        z-index: 0;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
